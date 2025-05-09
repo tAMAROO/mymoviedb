@@ -20,8 +20,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    overflow: auto;
-    white-space: nowrap;
   }
 
 
