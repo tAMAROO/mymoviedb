@@ -113,7 +113,7 @@
   .scroll {
     margin: 20px auto;
     padding: 15px;
-    max-width: 600px;
+    max-width: 50%;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
