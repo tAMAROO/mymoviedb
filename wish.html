@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bulma.css">
+
+    <title>MOVIEDB - Wish List</title>
+</head>
+
+<section class="hero is-primary is-medium">
+  <!-- Hero head: will stick at the top -->
+
+
+<!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <img src="img/logo.png" alt="Logo" height="150px" width="360px" />
+      <br>
+      <br>
+      <form class="search-bar">
+      <input type="text" id="myInput" onkeyup="myMovieSearch()" placeholder="Search: Movies, Shows .." />
+      </form>
+    </div>
+  </div>
+
+    <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+                <li><a href="index.html"><span class="icon"><img src="img/ico/house-solid.png"></span>Home</a></li>
+                <li><a href="movies.html"><span class="icon"><img src="img/ico/video-solid.png"></span>Movies</a></li>
+                <li><a href="shows.html"><span class="icon"><img src="img/ico/tv-solid.png"></span>TV Shows</a></li>
+                <li><a href="anime.html"><span class="icon"><img src="img/ico/user-ninja-solid.png"></span>Anime</a></li>
+                <li><a href="wish.html"><span class="icon"><img src="img/ico/heart-solid.png"></span>Wish List</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+  
+  </section>
+
+<body>
+
+
+
+
+
+</body>
+
+
+
+
+<script>
+function myMovieSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+</html>
+

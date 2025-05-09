@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  body {
+    color: white;
+    font-family: "microsoft yahei", arial, -apple-system, BlinkMacSystemFont,
+      "segoe ui", roboto, oxygen, cantarell, "helvetica neue", ubuntu, sans-serif;
+    background: #202021;
+  }
+  
+
+  
+  .row {
+    display: flex;
+    max-width: 80%;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-bar{
+    width: 100%;
+    max-width: 100%;
+    background: #2b2a33;
+    align-items: center;
+    border-radius: 60px;
+    padding: 0px 15px;
+
+  }
+
+  .search-bar #myInput {
+  background-position: 10px 12px;
+  width: 100%;
+  font-size: 17px;
+  padding: 12px 20px 12px 40px;
+  border: none;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  }
+  
+  #myUL {
+    width: 100%;
+    min-height: 100vh;
+    padding: 65px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #myUL .card {
+    position: relative;
+    font-size: 14px;
+    line-height: 21px;
+    width: 285px;
+    height: 360px;
+    overflow: hidden;
+    transition: 0.5s ease all;
+  }
+  
+  #myUL .card .card-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 50px 10px 7px;
+    background-image: linear-gradient(
+      180deg,
+      rgba(51, 55, 69, 0),
+      rgba(16, 21, 40, 0.95)
+    );
+    transition: inherit;
+  }
+  
+  #myUL .card .card-content .card-cont-header {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #myUL .card .card-content .describe {
+    max-height: 0;
+    opacity: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: inherit;
+  }
+  
+  #myUL.card:hover {
+    cursor: pointer;
+  }
+  
+  #myUL.card:hover .card-content {
+    background-image: linear-gradient(180deg, rgba(51, 55, 69, 0) 0, #101528 48%);
+  }
+  
+  #myUL.card:hover .btn {
+    background: #06c3dd;
+    border-color: #06c3dd;
+  }
+  
+  #myUL .card:hover .describe {
+    max-height: 200px;
+    padding: 8px 0;
+    opacity: 1;
+  }
+  
+
+  

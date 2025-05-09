@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bulma.css">
+
+    <title>MOVIEDB - Anime</title>
+</head>
+
+<section class="hero is-primary is-medium">
+  <!-- Hero head: will stick at the top -->
+
+
+<!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <img src="img/logo.png" alt="Logo" height="150px" width="360px" />
+      <br>
+      <br>
+      <form class="search-bar">
+      <input type="text" id="myInput" onkeyup="myMovieSearch()" placeholder="Search: Movies, Shows .." />
+      </form>
+    </div>
+  </div>
+
+    <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+                <li><a href="index.html"><span class="icon"><img src="img/ico/house-solid.png"></span>Home</a></li>
+                <li><a href="movies.html"><span class="icon"><img src="img/ico/video-solid.png"></span>Movies</a></li>
+                <li><a href="shows.html"><span class="icon"><img src="img/ico/tv-solid.png"></span>TV Shows</a></li>
+                <li><a href="anime.html"><span class="icon"><img src="img/ico/user-ninja-solid.png"></span>Anime</a></li>
+                <li><a href="wish.html"><span class="icon"><img src="img/ico/heart-solid.png"></span>Wish List</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+  
+  </section>
+
+<body>
+
+
+    <ul id="myUL">
+      <div class="row">
+
+        <!-- Shows row START -->
+
+        <li><a href="#" style="display: none;">007: Quantum of Solace</a>
+            <div class="col">
+              <div class="card">
+                <img src="img/poster/Quantum of Solace.jpg" alt="007: Quantum of Solace" width="100%" />
+                <div class="card-content">
+                  <div class="card-cont-header">
+                  <div class="cont-left">
+                    <h3 style="font-weight: 600; color: #ffffff;">007: Quantum of Solace</h3>
+                  </div>
+                  </div>
+                  <div class="describe">
+                    <span style="color: #037a68">2008 |</span>
+                    Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. White, who reveals that the organization that blackmailed Vesper is far more complex and dangerous than anyone had imagined.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </a></li>
+
+        <li><a href="#" style="display: none;">300</a>
+          <div class="col">
+            <div class="card">
+              <img src="img/poster/300.jpg" alt="300" width="100%" />
+              <div class="card-content">
+                <div class="card-cont-header">
+                <div class="cont-left">
+                  <h3 style="font-weight: 600; color: #ffffff;">300</h3>
+                </div>
+                </div>
+                <div class="describe">
+                  <span style="color: #037a68">2008 |</span>                    
+                  Based on Frank Miller's graphic novel, "300" is very loosely based the 480 B.C. Battle of Thermopylae, where the King of Sparta led his army against the advancing Persians; the battle is said to have inspired all of Greece to band together against the Persians, and helped usher in the world's first democracy.
+                </div>
+              </div>
+            </div>
+          </div>
+      </a></li>
+
+      <li><a href="#" style="display: none;">Avatar</a>
+        <div class="col">
+          <div class="card">
+            <img src="img/poster/Avatar.jpg" alt="Avatar" width="100%" />
+            <div class="card-content">
+              <div class="card-cont-header">
+              <div class="cont-left">
+                <h3 style="font-weight: 600; color: #ffffff;">Avatar</h3>
+              </div>
+              </div>
+              <div class="describe">
+                <span style="color: #037a68">2009 |</span>
+                In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.
+              </div>
+            </div>
+          </div>
+        </div>
+    </a></li>
+
+    <!-- Shows row END -->
+</div>
+</ul>
+
+
+</body>
+
+
+
+
+<script>
+function myMovieSearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+
+</html>
+
