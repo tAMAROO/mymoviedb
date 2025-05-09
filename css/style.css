@@ -14,7 +14,7 @@
 
   
   .row {
-    display: contents;
+    display: flex;
     max-width: 90%;
     gap: 15px;
     flex-direction: row;
@@ -30,7 +30,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 65px 0;
-    display: contents;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
